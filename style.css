@@ -115,10 +115,7 @@ a {
     gap: 0.625rem;
 }
 
-<<<<<<< HEAD
 /* Dimenssões da imagem da assinatura, pois sem ela, em display flex a imagem aumenta proporcionalmente a tela. */
-=======
->>>>>>> bf60c52d0111219bf776645430b5fe64ae8fc036
 .sobre-mim__assinatura {
     height: 52px;
     width: 294px;
