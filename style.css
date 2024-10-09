@@ -36,13 +36,16 @@ a {
     color: var(--cor-do-link);
 }
 
+.cabecalho,.apresentacao,.sobre-mim,.habilidades,.hobbies,.formacao,.projetos,.contato {
+    padding: 1rem;
+}
+
 /* ------------------------------ Seção Menu -------------------------------*/
 .cabecalho {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
     height: 3.5rem;
     background-color: var(--cor-de-fundo-menu);
 }
@@ -81,8 +84,29 @@ a {
     font-size: 0.9rem;
 }
 /* ------------------------------ Seção Apresentação ------------------------------*/
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
+.apresentacao__foto {
+    height: 6.125rem;
+    width: 6.125rem;
+    border-radius: 30rem;
+}
 
+.apresentacao__conteiner {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.redes {
+    display: flex;
+    gap: 0.5rem;
+    /* flex-wrap: wrap; */
+}
 /* ------------------------------ Seção Sobre mim ----------------------------------*/
 
 
@@ -101,7 +125,11 @@ a {
 /* ------------------------------ Responsividade ---------------------------------------*/
 
 /* Tablets e telas maiores */
-@media (min-width: 768px) {
+@media (min-width: 768px) { 
+    .cabecalho,.apresentacao,.sobre-mim,.habilidades,.hobbies,.formacao,.projetos,.contato {
+        padding: 2rem;
+    }
+
     .cabecalho {
         flex-direction: row;
         justify-content: space-between;
@@ -117,12 +145,13 @@ a {
         /* font-size: 1.5rem; */
     }
 
-    .navegacao__lista {
+    /* Navegação tablet */
+    /*.navegacao__lista {
         display: flex;
         flex-direction: row;
         gap: 1rem;
         /* margin-top: 0; */
-    }
+    /* } */
 
     .navegacao__permanente {
         padding: 0;
@@ -130,6 +159,21 @@ a {
 
     .navegacao__elemento a {
         font-size: 1rem;
+    }
+
+    .apresentacao {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .apresentacao__foto {
+        height: 9.125rem;
+        width: 9.125rem;
+    }
+
+    .redes {
+        gap: 2rem;
+        flex-wrap: wrap;
     }
 }
 
@@ -139,16 +183,32 @@ a {
     body {
         gap: 2rem;    
     }
+
+    .cabecalho,.apresentacao,.sobre-mim,.habilidades,.hobbies,.formacao,.projetos,.contato {
+        padding: 0 9.5rem;
+    }
+
     .cabecalho {
         height: 5.5rem;
-        padding: 0 10%;
     }
 
     .cabecalho__titulo {
         font-size: 1.8rem;
     }
 
+    .navegacao__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        /* margin-top: 0; */
+    }
+
     .navegacao__elemento a {
         /* font-size: 1.1rem; */
+    }
+
+    .apresentacao__foto {
+        height: 23rem;
+        width: 23rem;
     }
 }
