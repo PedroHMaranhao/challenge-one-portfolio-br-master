@@ -122,10 +122,58 @@ a {
 }
 
 /*------------------------------ Seção de Habilidades ------------------------------*/
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
+.habilidades__titulo {
+    align-self: center;
+}
+
+.habilidades__lista {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.habilidades__elemento {
+    height: 118px;
+    min-width: 118px;
+    width: 40%;
+    background-color: var(--cor-de-fundo-menu);
+    padding: 16px;
+    gap: 8px;
+}
 
 /*------------------------------ Seção de Hobbies --------------------------------*/
+.hobbies {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
+.hobbies__titulo {
+    align-self: center;
+}
+
+.hobbies__lista {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hobbies__elemento {
+    height: 118px;
+    min-width: 118px;
+    width: 40%;
+    background-color: var(--cor-de-fundo-menu);
+    padding: 16px;
+    gap: 8px;
+}
 
 /*------------------------------ Seção de Projetos --------------------------------*/
 
@@ -186,6 +234,10 @@ a {
         gap: 2rem;
         flex-wrap: wrap;
     }
+
+    .habilidades__elemento, .hobbies__elemento {
+        width: 30%;
+    }
 }
 
 /* Telas grandes */
@@ -227,5 +279,9 @@ a {
         padding-top: 64px;
         padding-bottom: 64px;
         padding-right: 30%;
+    }
+
+    .habilidades__elemento, .hobbies__elemento {
+        width: auto;
     }
 }
