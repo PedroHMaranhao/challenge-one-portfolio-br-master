@@ -142,7 +142,7 @@ a {
 .habilidades__elemento {
     height: 118px;
     min-width: 118px;
-    width: 40%;
+    width: 47%;
     background-color: var(--cor-de-fundo-menu);
     padding: 16px;
     gap: 8px;
@@ -169,10 +169,52 @@ a {
 .hobbies__elemento {
     height: 118px;
     min-width: 118px;
-    width: 40%;
+    width: 47%;
     background-color: var(--cor-de-fundo-menu);
     padding: 16px;
     gap: 8px;
+}
+
+/*------------------------------ Seção de Formação Acadêmica -----------------------*/
+
+.formacao {
+    background-color: var(--cor-de-fundo-section-alternada);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 0.625rem;
+}
+
+.formacao__titulo {
+    align-self: center;
+}
+
+.formacao__lista {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+}
+
+.formacao__elemento {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+}
+
+.formacao__caixa {
+    height: 118px;
+    width: 100%;
+    background-color: var(--cor-de-fundo-menu);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formacao__icone {
+    height: 146px;
+    width: 250px;
 }
 
 /*------------------------------ Seção de Projetos --------------------------------*/
@@ -236,8 +278,13 @@ a {
     }
 
     .habilidades__elemento, .hobbies__elemento {
-        width: 30%;
+        width: 31%;
     }
+
+    .formacao__lista {
+        width: 33%;
+    }
+
 }
 
 /* Telas grandes */
@@ -284,4 +331,14 @@ a {
     .habilidades__elemento, .hobbies__elemento {
         width: auto;
     }
+
+    .formacao__lista {
+        width: auto;
+    }
+
+    .formacao__caixa {
+        height: 286px;
+        width: 368px;
+    }
+
 }
