@@ -4,6 +4,7 @@
     --cor-de-fundo-menu: #ffffff;
     --cor-de-fundo-section-alternada: #eaf2fd;
     --cor-do-link: #000000;
+    --cor-botao: #2A7AE4;
 }
 
 *, 
@@ -36,7 +37,7 @@ a {
     color: var(--cor-do-link);
 }
 
-.cabecalho,.apresentacao,.sobre-mim,.habilidades,.hobbies,.formacao,.projetos,.contato {
+.cabecalho,.apresentacao,.sobre-mim,.habilidades,.hobbies,.contato {
     padding: 1rem;
 }
 
@@ -183,6 +184,7 @@ a {
     flex-direction: column;
     justify-items: center;
     gap: 0.625rem;
+    padding: 32px;
 }
 
 .formacao__titulo {
@@ -218,6 +220,67 @@ a {
 }
 
 /*------------------------------ Seção de Projetos --------------------------------*/
+.projetos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    gap: 16px;
+}
+
+.projetos__container {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.projetos__projeto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 16px;
+}
+
+.projetos__img {
+    width: 100%;
+}
+
+.projetos__txtbox {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.projetos__btnbox {
+    display: flex;
+    gap: 16px;
+}
+
+button {
+    text-decoration: none;
+}
+
+.projetos__button__repo, .projetos__button__demo {
+    height: 40px;
+    padding: 12px 16px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 16.44px;
+}
+
+.projetos__button__repo {
+    color: var(--cor-botao);
+    border: 1px solid black;
+}
+
+.projetos__button__demo {
+    background-color: var(--cor-botao);
+    color: var(--cor-de-fundo);
+    border: 1px solid var(--cor-botao);
+}
+
 
 
 /*------------------------------ Seção de Contato ---------------------------------*/
@@ -226,7 +289,7 @@ a {
 /* ------------------------------ Responsividade ---------------------------------------*/
 
 /* Tablets e telas maiores */
-@media (min-width: 768px) { 
+@media (min-width: 564px/*768px*/) { 
     .cabecalho,.apresentacao,.sobre-mim,.habilidades,.hobbies,.formacao,.projetos,.contato {
         padding: 2rem;
     }
@@ -288,7 +351,7 @@ a {
 }
 
 /* Telas grandes */
-@media (min-width: 1024px) {
+@media (min-width: 1104px/*1024px*/) {
     /* Aqui você pode ajustar ainda mais o design para telas grandes */
     body {
         gap: 2rem;    
@@ -341,4 +404,16 @@ a {
         width: 368px;
     }
 
+    .projetos__projeto:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+     .projetos__projeto {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .projetos__img {
+        max-width: 771px;
+    }
 }
