@@ -167,13 +167,33 @@
 
     <!-- Seção de Contato -->
     <section class="contato" id="contato">
-        <h2 class="contato__titulo">Contato</h2>
-        <form class="contato__formulario">
-            <input class="contato__campo" type="text" placeholder="Nome">
-            <input class="contato__campo" type="email" placeholder="E-mail">
-            <textarea class="contato__campo contato__campo--textarea" placeholder="Mensagem"></textarea>
-            <button class="contato__botao" type="submit">Enviar</button>
-        </form>
+        <div class="contato__img">
+            <img src="./assets/contact_image.png" alt="Contato">
+        </div>
+        <div class="contato__txt">
+            <div class="contato__cabecalho">
+                <h2 class="contato__titulo">Contato</h2>
+                <p>Quer entrar em contato comigo? <br> Preencha o formulário e entrarei em contato o mais rápido possível.</p>
+            </div>
+            <form class="input__pai">
+                <div class="float-label">    
+                    <input id="nome" type="text" required />
+                    <label for="nome">Nome</label>
+                </div>
+                <div class="float-label">    
+                    <input id="email" type="text" required />
+                    <label for="email">E-mail</label>
+                </div>
+                <div class="float-label">    
+                    <input id="assunto" type="text" required />
+                    <label for="assunto">Assunto</label>
+                </div>
+                <div class="float-label textarea__pai">
+                    <textarea name="mensagem" id="mensagem" type="text" placeholder="Mensagem" required></textarea>
+                </div>
+            </form>
+            <a class="contato__button" href="#">Enviar mensagem</a>
+        </div>
     </section>
     <footer>
         <p>Desenvolvido por Pedro Maranhão</p>

@@ -5,6 +5,7 @@
     --cor-de-fundo-section-alternada: #eaf2fd;
     --cor-do-link: #000000;
     --cor-botao: #2A7AE4;
+    --cor-placeholder: #A2A2A2;
 }
 
 *, 
@@ -258,10 +259,6 @@ a {
     gap: 16px;
 }
 
-button {
-    text-decoration: none;
-}
-
 .projetos__button__repo, .projetos__button__demo {
     height: 40px;
     padding: 12px 16px;
@@ -284,7 +281,124 @@ button {
 
 
 /*------------------------------ Seção de Contato ---------------------------------*/
+  .input__pai {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
 
+.float-label {
+    position: relative;
+    height: 37px;
+    width: 100%;
+
+  }
+  
+  .float-label label,
+  .float-label input {
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding-left: 8px;
+    height: 48px;
+    box-sizing: border-box;
+  }
+  
+  .float-label label {
+    transition-duration: 0.2s;
+    left: 2px;
+    top: 32px;
+    color: #C8C8C8;
+  }
+  
+  .float-label input {
+    top: 17px;
+    padding-top: 10px;
+    border: none;
+    border-bottom: 1px solid #C8C8C8;
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+  
+  input:focus {
+    outline: none;
+    border-bottom: 2px solid #2A7AE4;
+  }
+
+  .float-label input:valid + label {
+    top: 18px;
+    color: #2A7AE4;
+    font-size: 12px;
+  }
+
+  .textarea__pai {
+    height: 133px;
+  }
+
+  .float-label textarea {
+    display: block;
+    position: absolute;
+    resize: none;
+    padding: 8px;
+    width: 100%;
+    height: 133px;
+    border: none;
+    border-bottom: 1px solid #C8C8C8;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+  }
+
+  .float-label textarea::placeholder {
+    color: #C8C8C8;
+  }
+
+  textarea:focus {
+    outline: none;
+    border-bottom: 2px solid var(--cor-botao);
+  } 
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-de-fundo-section-alternada);
+}
+
+.contato__img {
+    display: none;
+}
+
+.contato__txt {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.contato__cabecalho {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contato__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.contato__button {
+    min-height: 40px;
+    min-width: 151px;
+    width: fit-content;
+    padding: 12px 16px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 16.44px;
+    background-color: var(--cor-botao);
+    color: var(--cor-de-fundo);
+    border: 1px solid var(--cor-botao);
+}
 
 /* ------------------------------ Responsividade ---------------------------------------*/
 
