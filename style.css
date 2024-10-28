@@ -142,6 +142,9 @@ a {
 }
 
 .habilidades__elemento {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     height: 118px;
     min-width: 118px;
     width: 47%;
@@ -149,6 +152,11 @@ a {
     padding: 16px;
     gap: 8px;
 }
+
+.habilidades__icone {
+    width: fit-content;
+}
+
 
 /*------------------------------ Seção de Hobbies --------------------------------*/
 .hobbies {
@@ -169,12 +177,20 @@ a {
 }
 
 .hobbies__elemento {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     height: 118px;
     min-width: 118px;
     width: 47%;
     background-color: var(--cor-de-fundo-menu);
     padding: 16px;
     gap: 8px;
+}
+
+.hobbies__icone {
+    width: fit-content;
 }
 
 /*------------------------------ Seção de Formação Acadêmica -----------------------*/
@@ -276,6 +292,7 @@ a {
     background-color: var(--cor-botao);
     color: var(--cor-de-fundo);
     border: 1px solid var(--cor-botao);
+    min-width: fit-content;
 }
 
 
@@ -361,7 +378,9 @@ a {
 
 .contato {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 16px;
+    padding: 32px;
     background-color: var(--cor-de-fundo-section-alternada);
 }
 
@@ -373,6 +392,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    width: 100%;
 }
 
 .contato__cabecalho {
@@ -400,6 +420,13 @@ a {
     border: 1px solid var(--cor-botao);
 }
 
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    align-items: center;
+}
 /* ------------------------------ Responsividade ---------------------------------------*/
 
 /* Tablets e telas maiores */
@@ -471,7 +498,11 @@ a {
         gap: 2rem;    
     }
 
-    .cabecalho,.apresentacao,.sobre-mim,.habilidades,.hobbies,.formacao,.projetos,.contato {
+    .formacao, .contato {
+        padding: 64px 9.5rem 64px 9.5rem;
+    } 
+
+    .cabecalho,.apresentacao,.sobre-mim,.habilidades,.hobbies,.projetos {
         padding: 0 9.5rem;
     }
 
@@ -505,8 +536,13 @@ a {
         padding-right: 30%;
     }
 
+    .hobbies__lista, .habilidades__lista {
+        flex-wrap: nowrap;
+    }
+
     .habilidades__elemento, .hobbies__elemento {
-        width: auto;
+        height: 174px;
+        width: 176px;
     }
 
     .formacao__lista {
@@ -528,6 +564,18 @@ a {
     }
 
     .projetos__img {
-        max-width: 771px;
+        width: 70%;
+    }
+
+    .contato__img {
+        display: flex;
+    }
+
+    .contato {
+        align-items: flex-end;
+    }
+
+    .rodape {
+        padding: 0 32px 32px 32px;
     }
 }
