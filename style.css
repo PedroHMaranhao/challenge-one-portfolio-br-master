@@ -23,7 +23,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    line-height: 1.6;
+    /* line-height: 1.6; */
     max-width: 100vw;
     display: flex;
     flex-direction: column;
@@ -48,7 +48,7 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 3.5rem;
+    height: 56px;
     background-color: var(--cor-de-fundo-menu);
 }
 
@@ -64,13 +64,15 @@ a {
 
 .autor__titulo {
     font-size: 1rem;
+    font-weight: 700;
+    line-height: 18.78px;
     text-align: center;
 }
 
 .navegacao {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 16px;
 } 
 .navegacao__lista {
     display: none;
@@ -79,42 +81,70 @@ a {
 .navegacao__permanente {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
-}
-
-.navegacao__elemento a {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 18.78px;
+    gap: 16px;
 }
 /* ------------------------------ Seção Apresentação ------------------------------*/
 .apresentacao {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .apresentacao__foto {
-    height: 6.125rem;
-    width: 6.125rem;
-    border-radius: 30rem;
+    height: 98px;
+    width: 98px;
+    border-radius: 480px;
 }
 
 .apresentacao__conteiner {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
+}
+
+.apresentacao__titulo {
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 25.83px;
+}
+
+.apresentacao__subtitulo {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 16.44px;
 }
 
 .redes {
     display: flex;
-    gap: 0.5rem;
-    /* flex-wrap: wrap; */
+    gap: 8px;
+}
+
+.redes__elemento {
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 16.44px;
 }
 /* ------------------------------ Seção Sobre mim ----------------------------------*/
 .sobre-mim {
     background-color: var(--cor-de-fundo-section-alternada);
     display: flex;
     flex-direction: column;
-    gap: 0.625rem;
+    gap: 10px;
+}
+
+.sobre-mim__titulo {
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 25.83px;
+}
+
+.sobre-mim__texto {
+    font-size: 0.875;
+    font-weight: 400;
+    line-height: 16.44px;
 }
 
 /* Dimenssões da imagem da assinatura, pois sem ela, em display flex a imagem aumenta proporcionalmente a tela. */
@@ -127,11 +157,14 @@ a {
 .habilidades {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .habilidades__titulo {
     align-self: center;
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 25.83px;
 }
 
 .habilidades__lista {
@@ -157,7 +190,11 @@ a {
     width: fit-content;
 }
 
-
+.habilidades__nome {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 18.78px;
+}
 /*------------------------------ Seção de Hobbies --------------------------------*/
 .hobbies {
     display: flex;
@@ -167,6 +204,9 @@ a {
 
 .hobbies__titulo {
     align-self: center;
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 25.83px;
 }
 
 .hobbies__lista {
@@ -193,6 +233,11 @@ a {
     width: fit-content;
 }
 
+.hobbies__nome {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 18.78px;
+}
 /*------------------------------ Seção de Formação Acadêmica -----------------------*/
 
 .formacao {
@@ -200,12 +245,15 @@ a {
     display: flex;
     flex-direction: column;
     justify-items: center;
-    gap: 0.625rem;
+    gap: 10px;
     padding: 32px;
 }
 
 .formacao__titulo {
     align-self: center;
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 25.83px;
 }
 
 .formacao__lista {
@@ -220,6 +268,7 @@ a {
     flex-direction: column;
     align-self: center;
     width: 100%;
+    gap: 8px;
 }
 
 .formacao__caixa {
@@ -236,6 +285,24 @@ a {
     width: 250px;
 }
 
+.formacao__texto {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formacao__nome {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 18.78px;
+}
+
+.formacao__detalhe {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 16.44px;
+}
+
 /*------------------------------ Seção de Projetos --------------------------------*/
 .projetos {
     display: flex;
@@ -244,6 +311,12 @@ a {
     align-items: center;
     padding: 32px;
     gap: 16px;
+}
+
+.projetos__titulo {
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 25.83px;
 }
 
 .projetos__container {
@@ -268,6 +341,18 @@ a {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.projetos__nome {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 18.78px;
+}
+
+.projetos__descricao {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 16.44px;
 }
 
 .projetos__btnbox {
@@ -401,6 +486,18 @@ a {
     gap: 8px;
 }
 
+.contato__titulo {
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 25.83px;
+}
+
+.contato__detalhe {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 18.78px;
+}
+
 .contato__formulario {
     display: flex;
     flex-direction: column;
@@ -427,6 +524,12 @@ a {
     padding: 32px;
     align-items: center;
 }
+
+.rodape__txt {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 18.78px;
+}
 /* ------------------------------ Responsividade ---------------------------------------*/
 
 /* Tablets e telas maiores */
@@ -450,20 +553,14 @@ a {
         /* font-size: 1.5rem; */
     }
 
-    /* Navegação tablet */
-    /*.navegacao__lista {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        /* margin-top: 0; */
-    /* } */
-
     .navegacao__permanente {
         padding: 0;
     }
 
-    .navegacao__elemento a {
+    .navegacao__permanente {
         font-size: 1rem;
+        font-weight: 700;
+        line-height: 18.78px;
     }
 
     .apresentacao {
@@ -522,7 +619,9 @@ a {
     }
 
     .navegacao__elemento a {
-        /* font-size: 1.1rem; */
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 18.78px;
     }
 
     .apresentacao__foto {
@@ -530,10 +629,40 @@ a {
         width: 23rem;
     }
 
+    .apresentacao__titulo {
+        font-size: 3.25rem;
+        font-weight: 700;
+        line-height: 61.05px;
+    }
+    
+    .apresentacao__subtitulo {
+        font-size: 1.375rem;
+        font-weight: 400;
+        line-height: 25.83px;
+    }
+    
+    .redes__elemento {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 18.78px;
+    }
+
     .sobre-mim {
         padding-top: 64px;
         padding-bottom: 64px;
         padding-right: 30%;
+    }
+
+    .sobre-mim__titulo, .habilidades__titulo, .hobbies__titulo, .formacao__titulo, .projetos__titulo, .contato__titulo{
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 37.57px;
+    }
+
+    .sobre-mim__texto {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 18.78px;
     }
 
     .hobbies__lista, .habilidades__lista {
@@ -552,6 +681,24 @@ a {
     .formacao__caixa {
         height: 286px;
         width: 368px;
+    }
+
+    .formacao__nome, .projetos__nome {
+        font-size: 1.375rem;
+        font-weight: 700;
+        line-height: 25.83px;
+    }
+
+    .formacao__detalhe, .projetos__descricao {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 18.78px;
+    }
+
+    .projetos__button__repo, .projetos__button__demo, .contato__button {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 18.78px;
     }
 
     .projetos__projeto:nth-child(even) {
